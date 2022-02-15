@@ -15,3 +15,5 @@ jobs:
           distribution: 'adopt'
       - name: Build with Maven
         run: mvn clean package
+      - name: Shout my name
+        run: echo "Hi I am Vikrant!!"
