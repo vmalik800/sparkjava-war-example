@@ -39,6 +39,6 @@ jobs:
       - name: ls -lrt
         run: pwd
       - name: Build the tagged Docker image
-        run: docker build . --file /home/runner/work/sparkjava-war-example/Dockerfile --tag kudanadocker/java-project:1.0
+        run: docker build . --file /home/runner/work/sparkjava-war-example/sparkjava-war-example/Dockerfile --tag kudanadocker/java-project:1.0
       - name: Push the tagged Docker image
         run: docker push kudanadocker/java-project:1.0
