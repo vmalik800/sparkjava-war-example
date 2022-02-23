@@ -37,6 +37,6 @@ jobs:
       - name: Login to DockerHub Registry
         run: docker login -u "kudanadocker" -p "@nkush@12345"
       - name: Build the tagged Docker image
-        run: docker build . --file Dockerfile --tag kudanadocker/java-project:1.0
+        run: docker build . --file /home/runner/work/sparkjava-war-example/Dockerfile --tag kudanadocker/java-project:1.0
       - name: Push the tagged Docker image
         run: docker push kudanadocker/java-project:1.0
