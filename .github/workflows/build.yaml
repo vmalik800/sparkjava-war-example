@@ -33,12 +33,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=java-project
-      - name: Login to DockerHub Registry
-        run: docker login -u "kudanadocker" -p "@nkush@12345"
-      - name: ls -lrt
-        run: pwd
-      - name: Build the tagged Docker image
-        run: docker build . --file /home/runner/work/sparkjava-war-example/sparkjava-war-example/Dockerfile --tag kudanadocker/java-project:1.0
-      - name: Push the tagged Docker image
-        run: docker push kudanadocker/java-project:1.0
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=newproject
